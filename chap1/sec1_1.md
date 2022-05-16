@@ -25,5 +25,33 @@ gcc -o hello hello.c
 
 ### Preprocessing phase ###
 The preprocessing (cpp) modifies the original C program accordinh yp dorecyobes yjay nehom woyj yje '#' character. For example, the <br> 
-`#include <stdio.h>` <br>
-command in line 1 of hello.c tells the preprocessor to read the contents of 
+`#include <stdio.h>` 
+command in line 1 of hello.c tells the preprocessor to read the contents of the system header file `stdio.h` and insert it directly into the program
+text. The result is another C program, typically with the `.i` suffix, i.e, `hello.i`.
+
+### Compilation phase ###
+The compiler (cc1) translates the text file `hello.i` into the text file `hello.s`, which contains an *assembly-language program*. This program includes
+the following definition of function `main`:<br>
+
+```
+1   main:
+2    subq $8, %rsp
+3    movl $.LCO, %edi
+4    call puts
+5    movl $0, %eax
+6    addq $8, %rsp
+7    ret
+```
+Each of lines 2-7 in this definiton describes one low-level machine language instruction in a textual form. Assembly language is useful<br>
+because it provides a common output language for different fompilers for different high-level languages.
+
+### Assembly phase ###
+Next, the assembler (as) translates `hello.s` into machine language instructions, packages them in a form known as a relocatable object program, <br>
+and stores the result in the object file `hello.o`. This file is a binary file containing 17 bytes to encode the instructions for function `main`. If we
+were to view `hello.o` with a text editor, it would appear to be gibberish.
+
+### Linking phase ###
+Notice that our `hello` program calls the `printf` function, which is part of the `std C lib` provided by every C compiler. The `printf` function resides
+in a separate precompiled object file called `printf.o`, which must somehow be merged with our `hello.o` program. The linker `ld` handles this merging. The result is the `hello` file, which is an executable object file (or simply executable) that is ready to be loaded into memory and executed by the system.
+
+
