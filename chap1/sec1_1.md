@@ -14,7 +14,7 @@ int main() {
 
 The representation of hello.c illustrates a fundamental idea: all information in a system -- including disk files, programs stored in memory, <br>
 user data stored in memory, and data transfered across a network -- is represented as a bunch of bits. The only thing that distinguishes different data<br>
-objects is the context in which we view them. For example, in different contexts, the same sequence of bytes might represent an integer, floating-point <br>
+objects is the context in which we view them. For example, in different contexts, the same sequence of bytes might represent an integer, floating-point
 number, character string, or machine instruction. <br>
 
 Here the GCC compiler driver reads the source file `hello.c` and translates it into an executable object file `hello`.<br>
