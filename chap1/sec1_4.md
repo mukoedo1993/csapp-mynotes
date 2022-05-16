@@ -29,3 +29,21 @@ between the I/O bus and an I/O device.
 ### Main Memory ###
 The *main memory* is a temporary storage device that holds a program and the data it manipulates while the processor
 is executing the porgram. Physically, main memory consists of a collection of *dynamic random access memory* (DRAM) chips.
+
+### Processor ###
+The *central processing unit (CPU)*, or simply *processor*, is the engine that interprets (or executes) instructions in main memory.
+At its core is a word-size storage device (or register) called the *program counter(PC)*.  At any point of time, the PC points at (contains
+the address of) some machine-language instruction in main memory.
+From the time that power is applied to the system until the time that the power is shut off, a processor repeatedly executes the instruction pointed
+at by the program counter and updates the program counter to point to the next instruction. A processor appears to operates according to a very simple
+instruction execution model, defined by its *instruction set architecture*. In this model, instructions execute in strict sequence, and executing a single instruction involves performing a series of steps. The processor reads the instruction from memory pointed at by the program counter(PC), intreprets the bits in the instruction, performs some simple operation dictated by the instruction, and then updates the PC to point to the next instruction, which may or may not be contiguous in memory to the instruction that was just excuted.
+There are only a few of these simple operations, and they revolve around main memory, the register file, and the *arithmetic/logic unit*(ALU). The register file is a small storage device that consists of a collection of word-size registers, each with its own unique name. The ALU computes new data
+and addresss values. Here are some examples of the simple operations that the CPU might carry out at the request of an instruction:
+<ul>
+  <li>Load: Copy a byte or a word from main memory into a register, overwriting the previous contents of the register.</li>
+  <li>Store: Copy a byte or a word from a register to a location in main memory, overwriting the previous contents of that register.</li>
+  <li>Operate: Copy the contents of two registers to the ALU, perform an arithmetic operation on the two words, and store the result in a register, overwriting the previous contents of that register.</li>
+  <li>Jump: Extract a word from the instruction itself and copy that word into the program counter (PC), overwriting the previous value of the PC.</li>
+ </ul>
+
+
