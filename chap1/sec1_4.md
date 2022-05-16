@@ -25,3 +25,7 @@ Each I/O device is connected to the I/O bus by either a *controller* or an *adap
 of packaging. Controllers are chip sets in the device itself or on the system's main printed circuit board(often called the *motherboard*). 
 An adpater is a card that plugs into a slot on the motherboard. Regardless, the purpose of each is to transfer information back and forth
 between the I/O bus and an I/O device.
+
+### Main Memory ###
+The *main memory* is a temporary storage device that holds a program and the data it manipulates while the processor
+is executing the porgram. Physically, main memory consists of a collection of *dynamic random access memory* (DRAM) chips.
