@@ -15,5 +15,6 @@ int main() {
 gcc -o hello hello.c
 ```
 # Preprocessing phase #
-The preprocessing (cpp) modifies the original C program accordinh yp dorecyobes yjay nehom woyj yje '#' character. For example, the '#include <stdio.h>' <br>
+The preprocessing (cpp) modifies the original C program accordinh yp dorecyobes yjay nehom woyj yje '#' character. For example, the <br> 
+`#include <stdio.h>` <br>
 command in line 1 of hello.c tells the preprocessor to read the contents of 
