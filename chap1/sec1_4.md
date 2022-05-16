@@ -41,7 +41,7 @@ There are only a few of these simple operations, and they revolve around main me
 and addresss values. Here are some examples of the simple operations that the CPU might carry out at the request of an instruction:
 <ul>
   <li>Load: Copy a byte or a word from main memory into a register, overwriting the previous contents of the register.</li>
-  <li>Store: Copy a byte or a word from a register to a location in main memory, overwriting the previous contents of that register.</li>
+  <li>Store: Copy a byte or a word from a register to a location in main memory, overwriting the previous contents of that location.</li>
   <li>Operate: Copy the contents of two registers to the ALU, perform an arithmetic operation on the two words, and store the result in a register, overwriting the previous contents of that register.</li>
   <li>Jump: Extract a word from the instruction itself and copy that word into the program counter (PC), overwriting the previous value of the PC.</li>
  </ul>
