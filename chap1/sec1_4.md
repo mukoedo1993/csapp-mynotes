@@ -46,4 +46,7 @@ and addresss values. Here are some examples of the simple operations that the CP
   <li>Jump: Extract a word from the instruction itself and copy that word into the program counter (PC), overwriting the previous value of the PC.</li>
  </ul>
 
+## 1.4.2 Running the hello Program
+Initially, the shell program is executing its instructions, waiting for us to type a command. As we type the characters `./hello` at the keyboard, the shell program reads each one into a register and then stores it in memory.
+When we hit the `enter` key on the keyboard, the shell knows that we have finished typing the command. The shell then loads the executable `hello` file by executing a sequence of instructions that copies the code and data in the `hello` object file from disk to main memory. (Using a technique known as * direct memory access* )
 
