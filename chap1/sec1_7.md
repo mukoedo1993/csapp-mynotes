@@ -6,3 +6,6 @@ with simple and uniform mechanisms for manipulating complicated and often wildly
 A <i>process</i> is the operating system's abstraction for a running program. Multiple processes can run concurrently on the same system,
 and each process appears to have exclusive use of the hardware. By concurrently, we mean that the instructions of one process are interleaved
 with the instructions of another process.
+A single CPU can appear to execute multiple processes concurrently by having the processor switch among them. The operating system performs this
+interleaving with a mechanism known as <i>context switching</i>. 
+
